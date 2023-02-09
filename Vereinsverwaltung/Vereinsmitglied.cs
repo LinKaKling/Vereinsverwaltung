@@ -8,8 +8,8 @@ namespace Vereinsverwaltung
 {
     internal class Vereinsmitglied
     {
-        int memberID;
-        string name;
+        int memberID { get; };
+        string name { get; };
         string firstName;
         string mailAdress;
         string adress;
