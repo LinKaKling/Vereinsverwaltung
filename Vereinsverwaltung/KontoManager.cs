@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vereinsverwaltung
 {
-    class KontoManager
+    internal class KontoManager
     {
         private string IBAN { get; }
         private string BIC { get; }
@@ -24,13 +24,15 @@ namespace Vereinsverwaltung
         {
             List<Kontobewegung> aListe = new List<Kontobewegung>();
 
+
             return aListe;
         }
         
         public Kontobewegung Zahlungseingang (string aIBAN, string aBIC, int aMitgliedNr, double aBetrag, DateTime aAusfuhrungsdatum, string aVerwendungszweck)
         {
-            Kontobewegung kontobewegung = new Kontobewegung();
-            return
+            Kontobewegung aKontobewegung = new Kontobewegung();
+            
+            return aKontobewegung;
         }
 
     }

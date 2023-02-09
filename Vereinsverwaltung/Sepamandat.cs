@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vereinsverwaltung
 {
-    class Sepamandat
+    public class Sepamandat
     {
         private int SepaNr { get; }
         private int MitgliederNr { get; }
