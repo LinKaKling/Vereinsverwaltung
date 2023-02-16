@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace Vereinsverwaltung
 {
-    internal class Vereinsmitglied
+    public class Vereinsmitglied
     {
-        int memberID { get; }
-        string name { get; }
-        string firstName;
-        string mailAdress;
-        string adress;
-        int birthYear;
-        int jobType;
-        bool useSepa;
-        int phone;
-        string country;
-        
+        private int MitgliederNr { get; }
+        private string Nachname { get; }
+        private string Vorname;
+        private string Mail;
+        private string Adresse;
+        private int Geburtsjahr;
+        private int JobTyp;
+        private bool Sepa;
+        private int Telefon;
+        private string Land;
+
+        public Vereinsmitglied(int memberID)
+        {
+            this.memberID = memberID;
+        }
     }
 }
