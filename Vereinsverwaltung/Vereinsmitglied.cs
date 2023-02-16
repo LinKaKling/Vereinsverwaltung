@@ -19,9 +19,9 @@ namespace Vereinsverwaltung
         private int Telefon;
         private string Land;
 
-        public Vereinsmitglied(int memberID)
+        public Vereinsmitglied(int aMitgliederNr)
         {
-            this.memberID = memberID;
+            this.MitgliederNr = aMitgliederNr;
         }
     }
 }

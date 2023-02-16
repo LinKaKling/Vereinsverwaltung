@@ -15,7 +15,7 @@ namespace Vereinsverwaltung
 
         public Kontobewegung Beitragseinzug(int aSepaNr)
         {
-            Kontobewegung aKontobewegung = new Kontobewegung();
+            Kontobewegung aKontobewegung = new Kontobewegung(1,2,3,"a",2,"b",1.2,"VWZ");
 
             return aKontobewegung;
         }
@@ -27,13 +27,13 @@ namespace Vereinsverwaltung
 
             return aListe;
         }
-        
+        /*
         public Kontobewegung Zahlungseingang (string aIBAN, string aBIC, int aMitgliedNr, double aBetrag, DateTime aAusfuhrungsdatum, string aVerwendungszweck)
         {
             Kontobewegung aKontobewegung = new Kontobewegung();
             
             return aKontobewegung;
         }
-
+        */
     }
 }

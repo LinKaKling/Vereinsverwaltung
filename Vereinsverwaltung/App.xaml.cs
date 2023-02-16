@@ -13,5 +13,18 @@ namespace Vereinsverwaltung
     /// </summary>
     public partial class App : Application
     {
+        private void ApplicationStart(object sender, StartupEventArgs e)
+        {
+            Window login = new LoginWindow();
+            login.Show();
+
+            // Determine if login was successful
+
+            //show your MainWindow
+        }
+        public void openMainWindow()
+        {
+
+        }
     }
 }

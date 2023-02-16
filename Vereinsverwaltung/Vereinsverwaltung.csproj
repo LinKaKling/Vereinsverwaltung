@@ -72,9 +72,16 @@
     </ApplicationDefinition>
     <Compile Include="Kontobewegung.cs" />
     <Compile Include="KontoManager.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MitgliederManager.cs" />
     <Compile Include="Sepamandat.cs" />
     <Compile Include="Vereinsmitglied.cs" />
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
