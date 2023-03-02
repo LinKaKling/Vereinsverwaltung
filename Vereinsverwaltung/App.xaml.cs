@@ -14,9 +14,24 @@ namespace Vereinsverwaltung
     /// </summary>
     public partial class App : Application
     {
+
         public static string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["VW"].ConnectionString;
+        }
+
+        private void ApplicationStart(object sender, StartupEventArgs e)
+        {
+            Window login = new LoginWindow();
+            login.Show();
+
+            // Determine if login was successful
+
+            //show your MainWindow
+        }
+        public void openMainWindow()
+        {
+
         }
     }
 }

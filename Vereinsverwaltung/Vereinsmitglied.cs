@@ -19,6 +19,7 @@ namespace Vereinsverwaltung
         private int Telefon;
         private string Land;
 
+
         public Vereinsmitglied(int mitgliederNr, string nachname, string vorname, string mail, string adresse, int geburtsjahr, int jobTyp, bool sepa, int telefon, string land)
         {
             MitgliederNr = mitgliederNr;
@@ -31,6 +32,7 @@ namespace Vereinsverwaltung
             Sepa = sepa;
             Telefon = telefon;
             Land = land;
+
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Vereinsverwaltung
         private string Verwendungszweck { get; }
 
        /* public Kontobewegung(int bewegNr, int sepaNr, int mitgliedNr, string iBAN, int bIC, string kontoinhaber, double betrag, DateTime ausfuehrdatum, string verwendungszweck)
+
         {
             BewegNr = bewegNr;
             SepaNr = sepaNr;
@@ -27,7 +28,7 @@ namespace Vereinsverwaltung
             BIC = bIC;
             Kontoinhaber = kontoinhaber;
             Betrag = betrag;
-            Ausfuehrdatum = ausfuehrdatum;
+            //Ausfuehrdatum = ausfuehrdatum;
             Verwendungszweck = verwendungszweck;
         }*/
     }

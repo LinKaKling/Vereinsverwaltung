@@ -16,6 +16,7 @@ namespace Vereinsverwaltung
         {
            Vereinsmitglied aVereinsmitglied; //angewählte VereinsmitgliederNr übergeben, um diese dann bearbeiten zu können.
             return aVereinsmitglied;
+
         }*/
     }
 }

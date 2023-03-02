@@ -15,7 +15,9 @@ namespace Vereinsverwaltung
 
        /* public Kontobewegung Beitragseinzug(int aSepaNr) //Übergabe von SEPA an Schnittstele
         {
+
             Kontobewegung kontobewegung = new Kontobewegung();
+
 
             return kontobewegung;
         }
@@ -27,13 +29,13 @@ namespace Vereinsverwaltung
 
             return aListe;
         }
-        
+        /*
         public Kontobewegung Zahlungseingang (string aIBAN, string aBIC, int aMitgliedNr, double aBetrag, DateTime aAusfuhrungsdatum, string aVerwendungszweck)
         {
             Kontobewegung aKontobewegung = new Kontobewegung();
             
             return aKontobewegung;
         }
-
+        */
     }
 }
