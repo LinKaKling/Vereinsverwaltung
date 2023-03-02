@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Data.SqlClient;
 
 namespace Vereinsverwaltung
 {
@@ -13,5 +14,9 @@ namespace Vereinsverwaltung
     /// </summary>
     public partial class App : Application
     {
+        public static string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["VW"].ConnectionString;
+        }
     }
 }
