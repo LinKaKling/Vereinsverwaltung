@@ -13,13 +13,15 @@ namespace Vereinsverwaltung
         private string Kontoinhaber { get; }
         private double Kontostand { get; }
 
-        public Kontobewegung Beitragseinzug(int aSepaNr)
+       /* public Kontobewegung Beitragseinzug(int aSepaNr) //Übergabe von SEPA an Schnittstele
         {
-            Kontobewegung aKontobewegung = new Kontobewegung(1,2,3,"a",2,"b",1.2,"VWZ");
 
-            return aKontobewegung;
+            Kontobewegung kontobewegung = new Kontobewegung();
+
+
+            return kontobewegung;
         }
-
+       */
         public List<Kontobewegung> HoleKontobewegung (DateTime aVon, DateTime aBis)
         {
             List<Kontobewegung> aListe = new List<Kontobewegung>();

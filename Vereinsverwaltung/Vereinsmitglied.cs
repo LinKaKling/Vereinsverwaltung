@@ -19,9 +19,20 @@ namespace Vereinsverwaltung
         private int Telefon;
         private string Land;
 
-        public Vereinsmitglied(int aMitgliederNr)
+
+        public Vereinsmitglied(int mitgliederNr, string nachname, string vorname, string mail, string adresse, int geburtsjahr, int jobTyp, bool sepa, int telefon, string land)
         {
-            this.MitgliederNr = aMitgliederNr;
+            MitgliederNr = mitgliederNr;
+            Nachname = nachname;
+            Vorname = vorname;
+            Mail = mail;
+            Adresse = adresse;
+            Geburtsjahr = geburtsjahr;
+            JobTyp = jobTyp;
+            Sepa = sepa;
+            Telefon = telefon;
+            Land = land;
+
         }
     }
 }

@@ -24,5 +24,11 @@ namespace Vereinsverwaltung
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.AddUser add = new Forms.AddUser();
+            add.ShowDialog();
+        }
     }
 }
