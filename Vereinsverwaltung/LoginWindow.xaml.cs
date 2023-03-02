@@ -22,14 +22,14 @@ namespace Vereinsverwaltung
         public LoginWindow()
         {
             InitializeComponent();
-
-            
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(Passwort.Password);
-            this.Hide();
-        }
+            Window mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        } 
 
     }
 }
