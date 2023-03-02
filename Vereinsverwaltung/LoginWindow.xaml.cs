@@ -27,6 +27,7 @@ namespace Vereinsverwaltung
         {
             MessageBox.Show(Passwort.Password);
             Window mainWindow = new MainWindow();
+            int check = Vereinsverwaltung.App.CheckLogin(1, "1");
             mainWindow.Show();
             this.Close();
         } 

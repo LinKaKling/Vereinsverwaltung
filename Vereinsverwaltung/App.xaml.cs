@@ -20,6 +20,11 @@ namespace Vereinsverwaltung
             return ConfigurationManager.ConnectionStrings["VW"].ConnectionString;
         }
 
+        public static int CheckLogin(int aNutzer, string aPasswort)
+        {
+            
+            return 1;
+        }
         private void ApplicationStart(object sender, StartupEventArgs e)
         {
             Window login = new LoginWindow();

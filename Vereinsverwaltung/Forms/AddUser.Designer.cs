@@ -37,13 +37,13 @@ namespace Vereinsverwaltung.Forms
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DateTimePicker_UserGebDat = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_Land = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_Ort = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_PLZ = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_Hausnummer = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_Strasse = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_Email = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_Nachname = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox_Vorname = new System.Windows.Forms.MaskedTextBox();
             this.Label_UserLand = new System.Windows.Forms.Label();
             this.Label_UserIsAdmin = new System.Windows.Forms.Label();
@@ -58,6 +58,10 @@ namespace Vereinsverwaltung.Forms
             this.Label_UserEMail = new System.Windows.Forms.Label();
             this.Label_UserNachname = new System.Windows.Forms.Label();
             this.Label_UserVorname = new System.Windows.Forms.Label();
+            this.comboBox_ErwerbArt = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.maskedTextBox_KontoNr = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -103,14 +107,18 @@ namespace Vereinsverwaltung.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.maskedTextBox_KontoNr);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.comboBox_ErwerbArt);
             this.groupBox1.Controls.Add(this.DateTimePicker_UserGebDat);
-            this.groupBox1.Controls.Add(this.maskedTextBox8);
-            this.groupBox1.Controls.Add(this.maskedTextBox7);
-            this.groupBox1.Controls.Add(this.maskedTextBox6);
-            this.groupBox1.Controls.Add(this.maskedTextBox5);
-            this.groupBox1.Controls.Add(this.maskedTextBox4);
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.maskedTextBox_Land);
+            this.groupBox1.Controls.Add(this.maskedTextBox_Ort);
+            this.groupBox1.Controls.Add(this.maskedTextBox_PLZ);
+            this.groupBox1.Controls.Add(this.maskedTextBox_Hausnummer);
+            this.groupBox1.Controls.Add(this.maskedTextBox_Strasse);
+            this.groupBox1.Controls.Add(this.maskedTextBox_Email);
+            this.groupBox1.Controls.Add(this.maskedTextBox_Nachname);
             this.groupBox1.Controls.Add(this.maskedTextBox_Vorname);
             this.groupBox1.Controls.Add(this.Label_UserLand);
             this.groupBox1.Controls.Add(this.Label_UserIsAdmin);
@@ -144,61 +152,62 @@ namespace Vereinsverwaltung.Forms
             this.DateTimePicker_UserGebDat.TabIndex = 25;
             this.DateTimePicker_UserGebDat.Value = new System.DateTime(1975, 1, 1, 0, 0, 0, 0);
             // 
-            // maskedTextBox8
+            // maskedTextBox_Land
             // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(111, 257);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox8.TabIndex = 24;
+            this.maskedTextBox_Land.Location = new System.Drawing.Point(111, 257);
+            this.maskedTextBox_Land.Name = "maskedTextBox_Land";
+            this.maskedTextBox_Land.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_Land.TabIndex = 24;
             // 
-            // maskedTextBox7
+            // maskedTextBox_Ort
             // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(111, 230);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox7.TabIndex = 23;
+            this.maskedTextBox_Ort.Location = new System.Drawing.Point(111, 230);
+            this.maskedTextBox_Ort.Name = "maskedTextBox_Ort";
+            this.maskedTextBox_Ort.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_Ort.TabIndex = 23;
             // 
-            // maskedTextBox6
+            // maskedTextBox_PLZ
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(111, 203);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox6.TabIndex = 22;
+            this.maskedTextBox_PLZ.Location = new System.Drawing.Point(111, 203);
+            this.maskedTextBox_PLZ.Name = "maskedTextBox_PLZ";
+            this.maskedTextBox_PLZ.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_PLZ.TabIndex = 22;
             // 
-            // maskedTextBox5
+            // maskedTextBox_Hausnummer
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(111, 175);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox5.TabIndex = 21;
+            this.maskedTextBox_Hausnummer.Location = new System.Drawing.Point(111, 175);
+            this.maskedTextBox_Hausnummer.Name = "maskedTextBox_Hausnummer";
+            this.maskedTextBox_Hausnummer.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_Hausnummer.TabIndex = 21;
             // 
-            // maskedTextBox4
+            // maskedTextBox_Strasse
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(111, 148);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox4.TabIndex = 20;
+            this.maskedTextBox_Strasse.Location = new System.Drawing.Point(111, 148);
+            this.maskedTextBox_Strasse.Name = "maskedTextBox_Strasse";
+            this.maskedTextBox_Strasse.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_Strasse.TabIndex = 20;
             // 
-            // maskedTextBox3
+            // maskedTextBox_Email
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(111, 121);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox3.TabIndex = 19;
+            this.maskedTextBox_Email.Location = new System.Drawing.Point(111, 121);
+            this.maskedTextBox_Email.Name = "maskedTextBox_Email";
+            this.maskedTextBox_Email.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_Email.TabIndex = 19;
             // 
-            // maskedTextBox2
+            // maskedTextBox_Nachname
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(111, 67);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox2.TabIndex = 18;
+            this.maskedTextBox_Nachname.Location = new System.Drawing.Point(111, 67);
+            this.maskedTextBox_Nachname.Name = "maskedTextBox_Nachname";
+            this.maskedTextBox_Nachname.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_Nachname.TabIndex = 18;
             // 
             // maskedTextBox_Vorname
             // 
-            this.maskedTextBox_Vorname.Location = new System.Drawing.Point(111, 40);;
+            this.maskedTextBox_Vorname.Location = new System.Drawing.Point(111, 40);
             this.maskedTextBox_Vorname.Name = "maskedTextBox_Vorname";
             this.maskedTextBox_Vorname.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox_Vorname.TabIndex = 17;
+            this.maskedTextBox_Vorname.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // Label_UserLand
             // 
@@ -232,9 +241,9 @@ namespace Vereinsverwaltung.Forms
             this.Label_UserKonto.AutoSize = true;
             this.Label_UserKonto.Location = new System.Drawing.Point(242, 73);
             this.Label_UserKonto.Name = "Label_UserKonto";
-            this.Label_UserKonto.Size = new System.Drawing.Size(101, 17);
+            this.Label_UserKonto.Size = new System.Drawing.Size(44, 17);
             this.Label_UserKonto.TabIndex = 12;
-            this.Label_UserKonto.Text = "Kontonummer*";
+            this.Label_UserKonto.Text = "IBAN*";
             // 
             // Label_UserErwerbArt
             // 
@@ -317,6 +326,38 @@ namespace Vereinsverwaltung.Forms
             this.Label_UserVorname.TabIndex = 3;
             this.Label_UserVorname.Text = "Vorname*";
             // 
+            // comboBox_ErwerbArt
+            // 
+            this.comboBox_ErwerbArt.FormattingEnabled = true;
+            this.comboBox_ErwerbArt.Location = new System.Drawing.Point(366, 43);
+            this.comboBox_ErwerbArt.Name = "comboBox_ErwerbArt";
+            this.comboBox_ErwerbArt.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_ErwerbArt.TabIndex = 26;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(366, 127);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 27;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(366, 94);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 22);
+            this.dateTimePicker1.TabIndex = 29;
+            // 
+            // maskedTextBox_KontoNr
+            // 
+            this.maskedTextBox_KontoNr.Location = new System.Drawing.Point(366, 70);
+            this.maskedTextBox_KontoNr.Name = "maskedTextBox_KontoNr";
+            this.maskedTextBox_KontoNr.Size = new System.Drawing.Size(121, 22);
+            this.maskedTextBox_KontoNr.TabIndex = 30;
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -348,13 +389,13 @@ namespace Vereinsverwaltung.Forms
         private System.Windows.Forms.Label Label_UserNachname;
         private System.Windows.Forms.Label Label_UserVorname;
         internal System.Windows.Forms.DateTimePicker DateTimePicker_UserGebDat;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Land;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Ort;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_PLZ;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Hausnummer;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Strasse;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Email;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Nachname;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_Vorname;
         private System.Windows.Forms.Label Label_UserLand;
         private System.Windows.Forms.Label Label_UserIsAdmin;
@@ -365,5 +406,9 @@ namespace Vereinsverwaltung.Forms
         private System.Windows.Forms.Label Label_UserOrt;
         private System.Windows.Forms.Label Label_UserPLZ;
         private System.Windows.Forms.Label Label_UserHausnummer;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox comboBox_ErwerbArt;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_KontoNr;
     }
 }
