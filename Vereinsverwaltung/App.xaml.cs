@@ -24,7 +24,7 @@ namespace Vereinsverwaltung
         public static int CheckLogin(int aNutzer, string aPasswort)
         {
             MessageBox.Show(aNutzer + aPasswort);
-            using ( var connection = new SQLiteConnection("Data Source=VereinsDB.db"))
+            using ( var connection = new SQLiteConnection(GetConnectionString()))
             {
                 connection.Open();
 
