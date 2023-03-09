@@ -62,9 +62,6 @@ namespace Vereinsverwaltung
             Window login = new LoginWindow();
             login.Show();
 
-            // Determine if login was successful
-
-            //show your MainWindow
         }
         public void openMainWindow()
         {

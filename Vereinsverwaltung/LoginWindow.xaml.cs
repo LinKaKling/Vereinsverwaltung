@@ -27,11 +27,13 @@ namespace Vereinsverwaltung
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(Passwort.Password);
-            Window mainWindow = new MainWindow();
+            
             int mitgliegNr = Convert.ToInt32(MitgliedNr.Text);
+
             int check = Vereinsverwaltung.App.CheckLogin(mitgliegNr, Passwort.Password);
             if (check > 0 && check == mitgliegNr)
             {
+                Window mainWindow = new MainWindow(mitgliegNr);
                 mainWindow.Show();
                 this.Close();
             }

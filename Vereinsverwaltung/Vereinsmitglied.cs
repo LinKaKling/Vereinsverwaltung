@@ -12,27 +12,40 @@ namespace Vereinsverwaltung
         private string Nachname { get; }
         private string Vorname;
         private string Mail;
-        private string Adresse;
-        private int Geburtsjahr;
+        private string Strasse;
+        private string Hausnummer;
+        private string PLZ;
+        private string Ort;
+        private string Geburtsdatum;
         private int JobTyp;
-        private bool Sepa;
-        private int Telefon;
         private string Land;
+        private string Konto;
+        private bool IsAdmin;
+        private string ErstellDat;
+        private string AblaufDat;
+        private bool Sepa;
+        private string Telefon;
 
 
-        public Vereinsmitglied(int mitgliederNr, string nachname, string vorname, string mail, string adresse, int geburtsjahr, int jobTyp, bool sepa, int telefon, string land)
+        public Vereinsmitglied(int mitgliederNr, string nachname, string vorname, string mail, string strasse, string hausnummer, string pLZ, string ort, string geburtsdatum, int jobTyp, string land, string konto, bool isAdmin, string erstellDat, string ablaufDat, bool sepa, string telefon)
         {
             MitgliederNr = mitgliederNr;
             Nachname = nachname;
             Vorname = vorname;
             Mail = mail;
-            Adresse = adresse;
-            Geburtsjahr = geburtsjahr;
+            Strasse = strasse;
+            Hausnummer = hausnummer;
+            PLZ = pLZ;
+            Ort = ort;
+            Geburtsdatum = geburtsdatum;
             JobTyp = jobTyp;
+            Land = land;
+            Konto = konto;
+            IsAdmin = isAdmin;
+            ErstellDat = erstellDat;
+            AblaufDat = ablaufDat;
             Sepa = sepa;
             Telefon = telefon;
-            Land = land;
-
         }
     }
 }
