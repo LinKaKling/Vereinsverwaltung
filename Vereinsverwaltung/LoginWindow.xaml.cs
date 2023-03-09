@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,10 +28,25 @@ namespace Vereinsverwaltung
         {
             MessageBox.Show(Passwort.Password);
             Window mainWindow = new MainWindow();
-            int check = Vereinsverwaltung.App.CheckLogin(1, "1");
-            mainWindow.Show();
-            this.Close();
-        } 
+            int mitgliegNr = Convert.ToInt32(MitgliedNr.Text);
+            int check = Vereinsverwaltung.App.CheckLogin(mitgliegNr, Passwort.Password);
+            if (check > 0 && check == mitgliegNr)
+            {
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("login nicht erfolgreich");
+            }
+            
+        }
 
+private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+    {
+        Regex regex = new Regex("[^0-9]+");
+        e.Handled = regex.IsMatch(e.Text);
     }
+
+}
 }

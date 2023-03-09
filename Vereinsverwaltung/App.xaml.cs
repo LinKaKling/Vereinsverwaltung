@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace Vereinsverwaltung
 {
@@ -22,8 +23,39 @@ namespace Vereinsverwaltung
 
         public static int CheckLogin(int aNutzer, string aPasswort)
         {
-            
-            return 1;
+            MessageBox.Show(aNutzer + aPasswort);
+            using ( var connection = new SQLiteConnection("Data Source=VereinsDB.db"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                    SELECT Passwort
+                    FROM Mitglied_Kenn
+                    WHERE MitgliedId = $nutzer
+                ";
+                command.Parameters.AddWithValue("$nutzer", aNutzer);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var passwort = reader.GetString(0);
+
+                        MessageBox.Show(passwort);
+                        if(passwort == aPasswort)
+                        {
+                            return aNutzer;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                }
+            }
+            return -1;
         }
         private void ApplicationStart(object sender, StartupEventArgs e)
         {

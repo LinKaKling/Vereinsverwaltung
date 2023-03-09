@@ -27,9 +27,7 @@
         <TextBlock Margin="10, 10, 5, 5" Grid.Column="0" Grid.Row="2" FontSize="12" Grid.ColumnSpan="1">
         </TextBlock>
 
-        <TextBox Name="MitgliedNr" Margin="10, 10, 5, 5" Grid.Column="0" Grid.Row="3">
-            MitgliedNr
-        </TextBox>
+        <TextBox x:Name="MitgliedNr" Margin="10, 10, 5, 5" Grid.Column="0" Grid.Row="3" PreviewTextInput="NumberValidationTextBox"/>
 
         <TextBlock Margin="10, 10, 5, 5" Grid.Column="0" Grid.Row="4" FontSize="12"  
             Grid.ColumnSpan="2">Passwort:
